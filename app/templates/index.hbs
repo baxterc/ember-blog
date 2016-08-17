@@ -1,1 +1,9 @@
 <h1>Home</h1>
+
+<ul>
+  {{#each model as |post|}}
+    {{post-tile post=post}}
+  {{/each}}
+
+  {{new-post save="save"}}
+</ul>
