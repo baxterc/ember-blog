@@ -6,7 +6,6 @@ export default Ember.Component.extend({
     showNewPost() {
       this.set('addNewPost', true);
     },
-
     save() {
       var params = {
         title: this.get('title') || "",
