@@ -1,3 +1,5 @@
 <h2>{{model.title}}</h2>
 {{model.content}}
+<hr>
 <button class="btn btn-danger" {{action 'destroyPost' model}}>Delete</button>
+{{update-post post=model update="update"}}
