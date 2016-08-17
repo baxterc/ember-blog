@@ -1,9 +1,5 @@
 <h1>Home</h1>
 
-<ul>
-  {{#each model as |post|}}
-    {{post-tile post=post destroyPost="destroyPost"}}
-  {{/each}}
+{{post-list posts=model}}
 
-  {{new-post save="save"}}
-</ul>
+{{new-post save="save"}}
