@@ -1,5 +1,6 @@
-{{#each sortedPosts as |post|}}
+{{#each pagedContent as |post|}}
   <li>
     {{post-tile post=post}}
   </li>
 {{/each}}
+{{page-numbers content=pagedContent}}
