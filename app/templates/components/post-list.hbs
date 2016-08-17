@@ -1,5 +1,5 @@
 {{#each sortedPosts as |post|}}
   <li>
-    <h3>{{post.title}} by {{post.author}} on {{post.date}}</h3>
+    {{post-tile post=post}}
   </li>
 {{/each}}

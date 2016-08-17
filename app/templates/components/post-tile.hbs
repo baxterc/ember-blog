@@ -1,4 +1,3 @@
-<p>{{post.title}} by {{post.author}} on {{post.date}}</p>
+<p>{{#link-to 'post' post.id}}{{post.title}}{{/link-to}} by {{post.author}} on {{post.date}}</p>
 
 {{update-post post=post update="update"}}
-<button class="btn btn-danger" {{action 'delete' post}}>Delete</button>
