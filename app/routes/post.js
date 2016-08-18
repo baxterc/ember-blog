@@ -6,8 +6,13 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(post) {
-        post.destroyRecord();
-        this.transitionTo('index');
+      var postComments = post.get("comments").map(function(comment) {
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(postComments).then(function() {
+        return post.destroyRecord();
+      });
+      this.transitionTo('index');
     },
     updatePost5(post, params) {
       Object.keys(params).forEach(function(key) {
@@ -36,6 +41,10 @@ export default Ember.Route.extend({
       // debugger;
       comment.save();
       this.transitionTo('post', params.post.id);
+    },
+    destroyComment(comment, post) {
+      comment.destroyRecord();
+      this.transitionTo('post', post.id);
     }
   }
 });
