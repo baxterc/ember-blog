@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  updateRentalForm: false,
+  updatePostForm: false,
   actions: {
-    showRentalForm() {
-      this.set('updateRentalForm', true);
+    showPostForm() {
+      this.set('updatePostForm', true);
     },
-    update(post) {
+    updatePost1(post) {
       var params = {
         title: this.get('title'),
         author: this.get('author'),
@@ -14,8 +14,8 @@ export default Ember.Component.extend({
         tag: this.get('tag'),
         date: this.get('date')
       };
-      this.set('updateRentalForm', false);
-      this.sendAction('update', post, params);
+      this.set('updatePostForm', false);
+      this.sendAction('updatePost2', post, params);
     }
   }
 });

@@ -6,12 +6,10 @@ export default Ember.Route.extend({
   },
   actions: {
     destroyPost(post) {
-      if (confirm('Are you sure you want to delete this post?')){
         post.destroyRecord();
         this.transitionTo('index');
-      }
     },
-    update(post, params) {
+    updatePost5(post, params) {
       Object.keys(params).forEach(function(key) {
         if (params[key]!== undefined) {
           post.set(key, params[key]);

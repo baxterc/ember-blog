@@ -1,4 +1,4 @@
-{{#if updateRentalForm}}
+{{#if updatePostForm}}
   <h2>New Post</h2>
     <div>
       <form>
@@ -27,9 +27,9 @@
           {{input value=date id="date" type="date" placeholder=post.date}}
         </div>
 
-        <button {{action 'update' post}}>Save</button>
+        <button {{action 'updatePost1' post}}>Save</button>
       </form>
     </div>
 {{else}}
-  <button {{action 'showRentalForm'}}>Update</button>
+  <button {{action 'showPostForm'}}>Update</button>
 {{/if}}

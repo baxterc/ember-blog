@@ -1,0 +1,5 @@
+<h2>{{post.title}}</h2>
+{{post.content}}
+<hr>
+<button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
+{{update-post post=post updatePost2="updatePost3"}}
