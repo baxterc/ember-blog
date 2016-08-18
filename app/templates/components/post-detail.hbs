@@ -3,3 +3,10 @@
 <hr>
 <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
 {{update-post post=post updatePost2="updatePost3"}}
+{{add-comment post=post addComment="addComment"}}
+
+{{#each post.comments as |comment|}}
+<h4>{{comment.title}} by {{comment.author}}</h4>
+{{comment.content}}
+<hr>
+{{/each}}
