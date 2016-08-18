@@ -18,6 +18,9 @@ export default Ember.Component.extend({
     },
     destroyComment(comment, post) {
       this.sendAction('destroyComment', comment, post);
+    },
+    saveTag(params) {
+      this.sendAction('saveTag', params);
     }
   }
 });

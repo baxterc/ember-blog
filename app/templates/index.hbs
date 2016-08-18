@@ -1,5 +1,7 @@
 <h1>Home</h1>
 
-{{post-list posts=model}}
+{{post-list posts=model.posts}}
 
 {{new-post save="save"}}
+
+{{comment-feed comments=model.comments}}

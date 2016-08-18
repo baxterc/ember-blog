@@ -45,6 +45,15 @@ export default Ember.Route.extend({
     destroyComment(comment, post) {
       comment.destroyRecord();
       this.transitionTo('post', post.id);
+    },
+    saveTag(params) {
+      var postTag = this.store.createRecord('tag', params);
+      var post = params.post;
+      post.get('tags').addObject(postTag);
+      postTag.save().then(function() {
+        return post.save();
+      });
+      this.transitionTo('post', params.post.id);
     }
   }
 });

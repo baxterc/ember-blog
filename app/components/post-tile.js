@@ -7,6 +7,9 @@ export default Ember.Component.extend({
     },
     delete(post) {
       this.sendAction('destroyPost', post);
+    },
+    saveTag(params) {
+      this.sendAction('saveTag', params);
     }
   }
 });

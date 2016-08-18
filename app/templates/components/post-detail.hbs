@@ -1,8 +1,15 @@
 <h2>{{post.title}}</h2>
+
+<p>Tags:
+  {{#each post.tags as |tag|}}
+  {{tag.name}}
+  {{/each}}
+</p>
 {{post.content}}
 <hr>
 <button class="btn btn-danger" {{action 'destroyPost' post}}>Delete</button>
 {{update-post post=post updatePost2="updatePost3"}}
+{{post-tag post=post saveTag="saveTag"}}
 {{add-comment post=post addComment="addComment"}}
 
 {{#each post.comments as |comment|}}

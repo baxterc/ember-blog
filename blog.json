@@ -2,17 +2,17 @@
     "title": "New blog!",
     "author": "Charlie Baxter",
     "content": "Here's my new blog. It's pretty great!",
-    "date": "08/16/2016",
-    "tag": "news"
+    "date": "08/16/2016"
   }, {
     "title": "Creating an Ember app",
     "author": "Dylan Barnard",
     "content": "Use ember g to create your web apps for you!",
-    "date": "08/17/2016",
-    "tag": "how-to"
+    "date": "08/17/2016"
   }], "comments": [{
     "author": "Dylan",
     "content": "Good blog!",
     "date": "2016-2-12"
+  }], "tags": [{
+    "name": "how-to"
   }]
 }

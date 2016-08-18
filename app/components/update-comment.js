@@ -13,7 +13,6 @@ export default Ember.Component.extend({
         content: this.get('content' || ""),
         post: this.get('post' || "")
       };
-      console.log(params.post.id)
       this.set('updateCommentForm', false);
       this.sendAction('updateComment', comment, params);
     }
