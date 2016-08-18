@@ -8,5 +8,6 @@
 {{#each post.comments as |comment|}}
 <h4>{{comment.title}} by {{comment.author}}</h4>
 {{comment.content}}
+{{update-comment comment=comment post=post updateComment="updateComment"}}
 <hr>
 {{/each}}

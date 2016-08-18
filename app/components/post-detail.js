@@ -12,6 +12,9 @@ export default Ember.Component.extend({
     },
     addComment(params){
       this.sendAction('addComment', params);
+    },
+    updateComment(comment, params) {
+      this.sendAction('updateComment', comment, params);
     }
   }
 });

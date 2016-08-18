@@ -9,10 +9,10 @@ export default Ember.Component.extend({
     },
     addComment() {
       var params = {
-        title: (this.get("title") || ""),
-        author: (this.get("author") || ""),
-        content: (this.get("content") || ""),
-        post: (this.get("post") || "")
+        title: this.get("title" || ""),
+        author: this.get("author" || ""),
+        content: this.get("content" || ""),
+        post: this.get("post" || "")
       };
       this.sendAction("addComment", params);
       this.set("addCommentForm", false);
