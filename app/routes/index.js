@@ -6,7 +6,8 @@ export default Ember.Route.extend({
       posts: this.store.findAll('post'),
       comments: this.store.query('comment', {
         limitToLast: 5
-      })
+      }),
+      tags: this.store.findAll('tag')
     });
   },
   actions: {

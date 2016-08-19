@@ -2,6 +2,16 @@
 
 {{post-list posts=model.posts}}
 
+{{tag-posts tagPosts = model.tagPosts}}
+
 {{new-post save="save"}}
 
 {{comment-feed comments=model.comments}}
+
+<h3>Tags</h3>
+{{#each model.tags as |tag|}}
+<p>{{#link-to 'tag' tag.id}}{{tag.name}}{{/link-to}}</p>
+{{/each}}
+
+
+<h2>Related Posts<h2>

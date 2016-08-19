@@ -1,0 +1,10 @@
+<h1>Posts</h1>
+<!-- {{#each model as |tag|}}
+  {{#each tag.posts as |post|}}
+  <p>{{post.title}}</p>
+{{/each}}
+{{/each}} -->
+
+{{#each model.posts as |post|}}
+  <p>{{post.title}}</p>
+{{/each}}
